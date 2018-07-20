@@ -1,0 +1,21 @@
+To use:
+
+1) Make sure you have a suitable compiler (g++ version < 3 is no good)
+
+2) Make sure all these files are in your include path.
+
+3) Then
+
+#include <numerics.h>
+and
+#include <numhelpers.h> // (if you want a few extras)
+#include <SVD.h>        // (if you want singular value decompositions)
+#include <LU.h>         // (if you want lu triangular decompositions)
+#include <SymEigen.h>   // (if you want Eigen decomposition of symmetric matrices)
+
+4) Finally you need to link with -llapack -lblas 
+(and -lg2c for g++ I'm not sure about other compilers)
+
+(this means you will also need liblapack.{a,so} and libblas.{a,so})
+
+That's it.

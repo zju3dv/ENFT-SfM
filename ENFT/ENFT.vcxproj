@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A7912FE1-C1FF-4354-AA5E-00B879423282}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ENFT</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\3rdparty\levmar\include;..\3rdparty\glut\include;..\3rdparty\glew\include;..\3rdparty\CVD\include;..\3rdparty\clapack\include;.\</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions> /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glut32.lib;glew32.lib;libcvd_d_vc14_x64.lib;blas_d_vc14_x64.lib;lapack_d_vc14_x64.lib;libf2c_d_vc14_x64.lib;levmar_d_vc14_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\3rdparty\glut\lib;..\3rdparty\glew\lib;..\3rdparty\CVD\lib;..\3rdparty\clapack\lib;..\3rdparty\levmar\lib</AdditionalLibraryDirectories>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>glut32.lib;glew32.lib;libcvd_d_vc14_x64.lib;blas_d_vc14_x64.lib;lapack_d_vc14_x64.lib;libf2c_d_vc14_x64.lib;levmar_d_vc14_x64.lib;opencv_world330d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>..\include\glut\lib;..\include\glew\lib;..\include\CVD\lib;..\include\clapack\lib;..\include\levmar\lib;..\include\opencv\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\3rdparty\levmar\include;..\3rdparty\glut\include;..\3rdparty\glew\include;..\3rdparty\CVD\include;..\3rdparty\clapack\include;.\</AdditionalIncludeDirectories>
+      <AdditionalOptions> /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\3rdparty\glut\lib;..\3rdparty\glew\lib;..\3rdparty\CVD\lib;..\3rdparty\clapack\lib;..\3rdparty\levmar\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glut32.lib;glew32.lib;libcvd_r_vc14_x64.lib;blas_r_vc14_x64.lib;lapack_r_vc14_x64.lib;libf2c_r_vc14_x64.lib;levmar_r_vc14_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>glut32.lib;glew32.lib;libcvd_r_vc14_x64.lib;blas_r_vc14_x64.lib;lapack_r_vc14_x64.lib;libf2c_r_vc14_x64.lib;levmar_r_vc14_x64.lib;opencv_world330.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../include/glut/lib;../include/glew/lib;../include/CVD/lib;../include/clapack/lib;../include/levmar/lib;../include/opencv/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="param\param_cam_tracking.txt" />
+    <None Include="param\param_ftr_tracking.txt" />
+    <None Include="param\param_seq_registration.txt" />
+    <None Include="param\param_trk_matching.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CameraTracking\CameraTracker.h" />
+    <ClInclude Include="CameraTracking\CameraTrackerDepth.h" />
+    <ClInclude Include="Estimation\Estimator.h" />
+    <ClInclude Include="Estimation\EstimatorArsac.h" />
+    <ClInclude Include="Estimation\EstimatorArsac.hpp" />
+    <ClInclude Include="Estimation\EstimatorArsacData.h" />
+    <ClInclude Include="Estimation\EstimatorLoProsac.hpp" />
+    <ClInclude Include="Estimation\EstimatorLosac.hpp" />
+    <ClInclude Include="Estimation\EstimatorParsac.h" />
+    <ClInclude Include="Estimation\EstimatorParsac.hpp" />
+    <ClInclude Include="Estimation\EstimatorProsac.hpp" />
+    <ClInclude Include="Estimation\EstimatorRansac.hpp" />
+    <ClInclude Include="FeatureTracking\FeatureExtractorSift.h" />
+    <ClInclude Include="FeatureTracking\FeatureMatcherSift.h" />
+    <ClInclude Include="FeatureTracking\FeatureTracker.h" />
+    <ClInclude Include="FeatureTracking\FeatureTrackerEnft.h" />
+    <ClInclude Include="LinearAlgebra\LinearSystem.h" />
+    <ClInclude Include="LinearAlgebra\Matrix1.h" />
+    <ClInclude Include="LinearAlgebra\Matrix11.h" />
+    <ClInclude Include="LinearAlgebra\Matrix2.h" />
+    <ClInclude Include="LinearAlgebra\Matrix2x11.h" />
+    <ClInclude Include="LinearAlgebra\Matrix2x3.h" />
+    <ClInclude Include="LinearAlgebra\Matrix2x4.h" />
+    <ClInclude Include="LinearAlgebra\Matrix2x5.h" />
+    <ClInclude Include="LinearAlgebra\Matrix2x6.h" />
+    <ClInclude Include="LinearAlgebra\Matrix2x7.h" />
+    <ClInclude Include="LinearAlgebra\Matrix2x8.h" />
+    <ClInclude Include="LinearAlgebra\Matrix3.h" />
+    <ClInclude Include="LinearAlgebra\Matrix3x11.h" />
+    <ClInclude Include="LinearAlgebra\Matrix3x4.h" />
+    <ClInclude Include="LinearAlgebra\Matrix3x6.h" />
+    <ClInclude Include="LinearAlgebra\Matrix3x7.h" />
+    <ClInclude Include="LinearAlgebra\Matrix3x8.h" />
+    <ClInclude Include="LinearAlgebra\Matrix4.h" />
+    <ClInclude Include="LinearAlgebra\Matrix4x6.h" />
+    <ClInclude Include="LinearAlgebra\Matrix4x7.h" />
+    <ClInclude Include="LinearAlgebra\Matrix5.h" />
+    <ClInclude Include="LinearAlgebra\Matrix5x4.h" />
+    <ClInclude Include="LinearAlgebra\Matrix5x6.h" />
+    <ClInclude Include="LinearAlgebra\Matrix5x7.h" />
+    <ClInclude Include="LinearAlgebra\Matrix5x9.h" />
+    <ClInclude Include="LinearAlgebra\Matrix6.h" />
+    <ClInclude Include="LinearAlgebra\Matrix6x3.h" />
+    <ClInclude Include="LinearAlgebra\Matrix6x4.h" />
+    <ClInclude Include="LinearAlgebra\Matrix6x5.h" />
+    <ClInclude Include="LinearAlgebra\Matrix6x7.h" />
+    <ClInclude Include="LinearAlgebra\Matrix6x8.h" />
+    <ClInclude Include="LinearAlgebra\Matrix7.h" />
+    <ClInclude Include="LinearAlgebra\Matrix7x3.h" />
+    <ClInclude Include="LinearAlgebra\Matrix8.h" />
+    <ClInclude Include="LinearAlgebra\Matrix9x5.h" />
+    <ClInclude Include="LinearAlgebra\MatrixMxN.h" />
+    <ClInclude Include="LinearAlgebra\Vector11.h" />
+    <ClInclude Include="LinearAlgebra\Vector12.h" />
+    <ClInclude Include="LinearAlgebra\Vector2.h" />
+    <ClInclude Include="LinearAlgebra\Vector3.h" />
+    <ClInclude Include="LinearAlgebra\Vector4.h" />
+    <ClInclude Include="LinearAlgebra\Vector5.h" />
+    <ClInclude Include="LinearAlgebra\Vector6.h" />
+    <ClInclude Include="LinearAlgebra\Vector7.h" />
+    <ClInclude Include="LinearAlgebra\Vector8.h" />
+    <ClInclude Include="LinearAlgebra\Vector9.h" />
+    <ClInclude Include="LinearAlgebra\VectorN.h" />
+    <ClInclude Include="Optimization\BundleAdjustor.h" />
+    <ClInclude Include="Optimization\BundleAdjustor.hpp" />
+    <ClInclude Include="Optimization\BundleAdjustorData.h" />
+    <ClInclude Include="Optimization\BundleAdjustorData.hpp" />
+    <ClInclude Include="Optimization\BundleAdjustorLM.hpp" />
+    <ClInclude Include="Optimization\BundleAdjustorPCG.hpp" />
+    <ClInclude Include="Optimization\GlobalTransformationOptimizer.h" />
+    <ClInclude Include="Optimization\GlobalTransformationOptimizer.hpp" />
+    <ClInclude Include="Optimization\GlobalTransformationOptimizerData.h" />
+    <ClInclude Include="Optimization\GlobalTransformationOptimizerLM.hpp" />
+    <ClInclude Include="Optimization\GlobalTransformationOptimizerPCG.hpp" />
+    <ClInclude Include="Optimization\Optimizer.h" />
+    <ClInclude Include="Optimization\Optimizer.hpp" />
+    <ClInclude Include="Optimization\OptimizerData.h" />
+    <ClInclude Include="ProgramGL\ProgramGL.h" />
+    <ClInclude Include="ProgramGL\ProgramGL.hpp" />
+    <ClInclude Include="ProgramGL\ProgramGLAssignOrientation.h" />
+    <ClInclude Include="ProgramGL\ProgramGLBlend.h" />
+    <ClInclude Include="ProgramGL\ProgramGLComputeGainRatio.h" />
+    <ClInclude Include="ProgramGL\ProgramGLDepth.h" />
+    <ClInclude Include="ProgramGL\ProgramGLDescriptorCopy.h" />
+    <ClInclude Include="ProgramGL\ProgramGLDescriptorGenerate.h" />
+    <ClInclude Include="ProgramGL\ProgramGLDescriptorNormalize.h" />
+    <ClInclude Include="ProgramGL\ProgramGLDescriptorRearrange.h" />
+    <ClInclude Include="ProgramGL\ProgramGLDescriptorSelect.h" />
+    <ClInclude Include="ProgramGL\ProgramGLDoG.h" />
+    <ClInclude Include="ProgramGL\ProgramGLDoGExtremum.h" />
+    <ClInclude Include="ProgramGL\ProgramGLFeatureCopy.h" />
+    <ClInclude Include="ProgramGL\ProgramGLFeatureHistogram.h" />
+    <ClInclude Include="ProgramGL\ProgramGLFeatureLevelize.h" />
+    <ClInclude Include="ProgramGL\ProgramGLFeatureLocalize.h" />
+    <ClInclude Include="ProgramGL\ProgramGLFeatureRearrange.h" />
+    <ClInclude Include="ProgramGL\ProgramGLFeatureRectify.h" />
+    <ClInclude Include="ProgramGL\ProgramGLFeatureSelect.h" />
+    <ClInclude Include="ProgramGL\ProgramGLFilterPacked.h" />
+    <ClInclude Include="ProgramGL\ProgramGLGradient.h" />
+    <ClInclude Include="ProgramGL\ProgramGLMatchFeature.h" />
+    <ClInclude Include="ProgramGL\ProgramGLSample.h" />
+    <ClInclude Include="ProgramGL\ProgramGLTest.h" />
+    <ClInclude Include="ProgramGL\ProgramGLTrackFeatureEnft.h" />
+    <ClInclude Include="ProgramGL\ProgramGLUnpack.h" />
+    <ClInclude Include="ProgramGL\ProgramGLUtility.h" />
+    <ClInclude Include="ProgramGL\TextureGL.h" />
+    <ClInclude Include="ProgramGL\TextureGL.hpp" />
+    <ClInclude Include="SequenceRegistration\SequenceRegisteror.h" />
+    <ClInclude Include="SequenceSet\SegmentSetBundleAdjustorData2DSimilarity.h" />
+    <ClInclude Include="SequenceSet\SequenceSet.h" />
+    <ClInclude Include="SequenceSet\SequenceSetBundleAdjustorData3DSimilarity.h" />
+    <ClInclude Include="SequenceSet\SequenceTransformationOptimizerDataSimilarity.h" />
+    <ClInclude Include="Sequence\Descriptor.h" />
+    <ClInclude Include="Sequence\Feature.h" />
+    <ClInclude Include="Sequence\Sequence.h" />
+    <ClInclude Include="Sequence\SequenceBundleAdjustorData.h" />
+    <ClInclude Include="Sequence\SequenceBundleAdjustorDataDepth.h" />
+    <ClInclude Include="Sequence\SequenceBundleAdjustorDataIntrinsicVariable.h" />
+    <ClInclude Include="Sequence\SequenceBundleAdjustorDataProjective.h" />
+    <ClInclude Include="Sequence\SequenceDepth.h" />
+    <ClInclude Include="Sequence\SequenceTag.h" />
+    <ClInclude Include="SfM\AbsoluteQuadric.h" />
+    <ClInclude Include="SfM\AbsoluteQuadricEstimator.h" />
+    <ClInclude Include="SfM\AbsoluteQuadricOptimizerData.h" />
+    <ClInclude Include="SfM\AffineTransformation.h" />
+    <ClInclude Include="SfM\BoundingBox.h" />
+    <ClInclude Include="SfM\Camera.h" />
+    <ClInclude Include="SfM\CameraArray.h" />
+    <ClInclude Include="SfM\CameraArrayCalibrationParameter.h" />
+    <ClInclude Include="SfM\CameraArrayEPnP.h" />
+    <ClInclude Include="SfM\CameraArrayEstimatorData.h" />
+    <ClInclude Include="SfM\CameraArrayEstimatorMinimalSample.h" />
+    <ClInclude Include="SfM\CameraEPnP.h" />
+    <ClInclude Include="SfM\CameraEstimator.h" />
+    <ClInclude Include="SfM\CameraEstimatorData.h" />
+    <ClInclude Include="SfM\CameraEstimatorDataDepth.h" />
+    <ClInclude Include="SfM\CameraEstimatorDepth.h" />
+    <ClInclude Include="SfM\CameraPair.h" />
+    <ClInclude Include="SfM\CameraPairEstimator.h" />
+    <ClInclude Include="SfM\CameraPairEstimatorData.h" />
+    <ClInclude Include="SfM\CameraPairEstimatorMinimalSample.h" />
+    <ClInclude Include="SfM\EssentialMatrix.h" />
+    <ClInclude Include="SfM\EssentialMatrixEstimator.h" />
+    <ClInclude Include="SfM\EssentialMatrixEstimatorData.h" />
+    <ClInclude Include="SfM\EssentialMatrixFivePointAlgorithm.h" />
+    <ClInclude Include="SfM\FundamentalMatrix.h" />
+    <ClInclude Include="SfM\FundamentalMatrixEightPointAlgorithm.h" />
+    <ClInclude Include="SfM\FundamentalMatrixEstimator.h" />
+    <ClInclude Include="SfM\FundamentalMatrixEstimatorData.h" />
+    <ClInclude Include="SfM\Homography.h" />
+    <ClInclude Include="SfM\HomographyEstimator.h" />
+    <ClInclude Include="SfM\HomographyEstimatorData.h" />
+    <ClInclude Include="SfM\HomographySolver.h" />
+    <ClInclude Include="SfM\IntrinsicMatrix.h" />
+    <ClInclude Include="SfM\KeyFrameExtractor.h" />
+    <ClInclude Include="SfM\Match.h" />
+    <ClInclude Include="SfM\OmegaMatrix.h" />
+    <ClInclude Include="SfM\Plane.h" />
+    <ClInclude Include="SfM\PlaneEstimator.h" />
+    <ClInclude Include="SfM\PlaneEstimatorData.h" />
+    <ClInclude Include="SfM\PlaneEstimatorMinimalSample.h" />
+    <ClInclude Include="SfM\PlaneSolver.h" />
+    <ClInclude Include="SfM\Point.h" />
+    <ClInclude Include="SfM\Point2DDistortionData.h" />
+    <ClInclude Include="SfM\Point3DEstimator.h" />
+    <ClInclude Include="SfM\Point3DEstimatorData.h" />
+    <ClInclude Include="SfM\Point3DEstimatorDataDepth.h" />
+    <ClInclude Include="SfM\Point3DEstimatorDepth.h" />
+    <ClInclude Include="SfM\Point3DEstimatorMinimalSample.h" />
+    <ClInclude Include="SfM\Point3DSolver.h" />
+    <ClInclude Include="SfM\ProjectiveMatrix.h" />
+    <ClInclude Include="SfM\ProjectiveMatrixDecomposer.h" />
+    <ClInclude Include="SfM\ProjectiveMatrixEstimator.h" />
+    <ClInclude Include="SfM\ProjectiveMatrixEstimatorData.h" />
+    <ClInclude Include="SfM\ProjectiveMatrixSolver.h" />
+    <ClInclude Include="SfM\Quaternion.h" />
+    <ClInclude Include="SfM\RelativePoseEstimatorDataDepth.h" />
+    <ClInclude Include="SfM\RelativePoseEstimatorDepth.h" />
+    <ClInclude Include="SfM\RelativeTranslation.h" />
+    <ClInclude Include="SfM\RelativeTranslationEstimator.h" />
+    <ClInclude Include="SfM\RelativeTranslationEstimatorData.h" />
+    <ClInclude Include="SfM\RelativeTranslationEstimatorMinimalSample.h" />
+    <ClInclude Include="SfM\RelativeTranslationSolver.h" />
+    <ClInclude Include="SfM\RigidTransformation.h" />
+    <ClInclude Include="SfM\RigidTransformationSolver.h" />
+    <ClInclude Include="SfM\RotationTransformation.h" />
+    <ClInclude Include="SfM\RotationTransformationSolver.h" />
+    <ClInclude Include="SfM\ScaleEstimator.h" />
+    <ClInclude Include="SfM\ScaleEstimatorData.h" />
+    <ClInclude Include="SfM\SimilarityTransformation.h" />
+    <ClInclude Include="SfM\SimilarityTransformationEstimator.h" />
+    <ClInclude Include="SfM\SimilarityTransformationEstimatorData.h" />
+    <ClInclude Include="SfM\SimilarityTransformationSolver.h" />
+    <ClInclude Include="SfM\Translation.h" />
+    <ClInclude Include="SfM\TranslationEstimator.h" />
+    <ClInclude Include="SfM\TranslationEstimatorData.h" />
+    <ClInclude Include="SfM\TranslationScaleEstimator.h" />
+    <ClInclude Include="SfM\TranslationScaleEstimatorData.h" />
+    <ClInclude Include="SfM\TranslationScaleOptimizer.h" />
+    <ClInclude Include="SfM\TranslationScaleSolver.h" />
+    <ClInclude Include="SfM\TranslationSolver.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TrackMatching\HierarchicalKMeans.h" />
+    <ClInclude Include="TrackMatching\KCTree.h" />
+    <ClInclude Include="TrackMatching\KMeans.h" />
+    <ClInclude Include="TrackMatching\MatchingMatrix.h" />
+    <ClInclude Include="TrackMatching\TrackMatcher.h" />
+    <ClInclude Include="Utility\AlignedVector.h" />
+    <ClInclude Include="Utility\Bucket.h" />
+    <ClInclude Include="Utility\BufferManager.h" />
+    <ClInclude Include="Utility\Configurator.h" />
+    <ClInclude Include="Utility\FillMap.h" />
+    <ClInclude Include="Utility\linux_sse\emmintrin.h" />
+    <ClInclude Include="Utility\linux_sse\xmmintrin.h" />
+    <ClInclude Include="Utility\Mutex.h" />
+    <ClInclude Include="Utility\Polynomial.h" />
+    <ClInclude Include="Utility\Pool.h" />
+    <ClInclude Include="Utility\Random.h" />
+    <ClInclude Include="Utility\SegmentTree.h" />
+    <ClInclude Include="Utility\SparseMatrix.h" />
+    <ClInclude Include="Utility\SparseVector.h" />
+    <ClInclude Include="Utility\SSE.h" />
+    <ClInclude Include="Utility\Table.h" />
+    <ClInclude Include="Utility\Timer.h" />
+    <ClInclude Include="Utility\Utility.h" />
+    <ClInclude Include="Viewing\Arcball.h" />
+    <ClInclude Include="Viewing\CameraVolume.h" />
+    <ClInclude Include="Viewing\EventHandler.h" />
+    <ClInclude Include="Viewing\Viewer.h" />
+    <ClInclude Include="Viewing\ViewerImage.h" />
+    <ClInclude Include="Viewing\ViewerSequence.h" />
+    <ClInclude Include="Viewing\ViewerSequenceDepth.h" />
+    <ClInclude Include="Viewing\ViewerSequenceSet.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CameraTracking\CameraTracker.cpp" />
+    <ClCompile Include="CameraTracking\CameraTrackerDepth.cpp" />
+    <ClCompile Include="CameraTracking\CameraTrackerDepthIO.cpp" />
+    <ClCompile Include="CameraTracking\CameraTrackerDepthSfM.cpp" />
+    <ClCompile Include="CameraTracking\CameraTrackerIO.cpp" />
+    <ClCompile Include="CameraTracking\CameraTrackerSfM.cpp" />
+    <ClCompile Include="ENFT.cpp" />
+    <ClCompile Include="FeatureTracking\FeatureExtractorSift.cpp" />
+    <ClCompile Include="FeatureTracking\FeatureTracker.cpp" />
+    <ClCompile Include="FeatureTracking\FeatureTrackerEnft.cpp" />
+    <ClCompile Include="FeatureTracking\FeatureTrackerFlowVoting.cpp" />
+    <ClCompile Include="FeatureTracking\FeatureTrackerIO.cpp" />
+    <ClCompile Include="FeatureTracking\FeatureTrackerSift.cpp" />
+    <ClCompile Include="LinearAlgebra\Matrix11.cpp" />
+    <ClCompile Include="LinearAlgebra\Matrix3.cpp" />
+    <ClCompile Include="LinearAlgebra\Matrix4.cpp" />
+    <ClCompile Include="LinearAlgebra\Matrix5.cpp" />
+    <ClCompile Include="LinearAlgebra\Matrix6.cpp" />
+    <ClCompile Include="LinearAlgebra\Matrix7.cpp" />
+    <ClCompile Include="LinearAlgebra\Matrix8.cpp" />
+    <ClCompile Include="LinearAlgebra\MatrixMxN.cpp" />
+    <ClCompile Include="ProgramGL\ProgramGL.cpp" />
+    <ClCompile Include="SequenceRegistration\SequenceRegisteror.cpp" />
+    <ClCompile Include="SequenceRegistration\SequenceRegisterorIO.cpp" />
+    <ClCompile Include="SequenceRegistration\SequenceRegisterorSegmentation.cpp" />
+    <ClCompile Include="SequenceRegistration\SequenceRegisterorSfM.cpp" />
+    <ClCompile Include="SequenceSet\SegmentSetBundleAdjustorData2DSimilarity.cpp" />
+    <ClCompile Include="SequenceSet\SequenceSet.cpp" />
+    <ClCompile Include="SequenceSet\SequenceSetBundleAdjustment.cpp" />
+    <ClCompile Include="SequenceSet\SequenceSetBundleAdjustorData3DSimilarity.cpp" />
+    <ClCompile Include="SequenceSet\SequenceSetDataAssociation.cpp" />
+    <ClCompile Include="SequenceSet\SequenceSetFrame.cpp" />
+    <ClCompile Include="SequenceSet\SequenceSetIO.cpp" />
+    <ClCompile Include="SequenceSet\SequenceSetMeasurement.cpp" />
+    <ClCompile Include="SequenceSet\SequenceSetTrack.cpp" />
+    <ClCompile Include="SequenceSet\SequenceTransformationOptimizerDataSimilarity.cpp" />
+    <ClCompile Include="Sequence\Sequence.cpp" />
+    <ClCompile Include="Sequence\SequenceBundleAdjustment.cpp" />
+    <ClCompile Include="Sequence\SequenceBundleAdjustorData.cpp" />
+    <ClCompile Include="Sequence\SequenceBundleAdjustorDataDepth.cpp" />
+    <ClCompile Include="Sequence\SequenceBundleAdjustorDataIntrinsicVariable.cpp" />
+    <ClCompile Include="Sequence\SequenceBundleAdjustorDataProjective.cpp" />
+    <ClCompile Include="Sequence\SequenceDataAssociation.cpp" />
+    <ClCompile Include="Sequence\SequenceDepth.cpp" />
+    <ClCompile Include="Sequence\SequenceFrame.cpp" />
+    <ClCompile Include="Sequence\SequenceIO.cpp" />
+    <ClCompile Include="Sequence\SequenceMeasurement.cpp" />
+    <ClCompile Include="Sequence\SequenceSynthesis.cpp" />
+    <ClCompile Include="Sequence\SequenceTag.cpp" />
+    <ClCompile Include="Sequence\SequenceTrack.cpp" />
+    <ClCompile Include="Sequence\SequenceTransformation.cpp" />
+    <ClCompile Include="SfM\AbsoluteQuadricEstimator.cpp" />
+    <ClCompile Include="SfM\CameraArrayEPnP.cpp" />
+    <ClCompile Include="SfM\CameraEPnP.cpp" />
+    <ClCompile Include="SfM\EssentialMatrix.cpp" />
+    <ClCompile Include="SfM\EssentialMatrixFivePointAlgorithm.cpp" />
+    <ClCompile Include="SfM\FundamentalMatrix.cpp" />
+    <ClCompile Include="SfM\FundamentalMatrixEightPointAlgorithm.cpp" />
+    <ClCompile Include="SfM\Homography.cpp" />
+    <ClCompile Include="SfM\HomographySolver.cpp" />
+    <ClCompile Include="SfM\PlaneSolver.cpp" />
+    <ClCompile Include="SfM\Point3DSolver.cpp" />
+    <ClCompile Include="SfM\ProjectiveMatrix.cpp" />
+    <ClCompile Include="SfM\ProjectiveMatrixSolver.cpp" />
+    <ClCompile Include="SfM\RelativeTranslationSolver.cpp" />
+    <ClCompile Include="SfM\RigidTransformationSolver.cpp" />
+    <ClCompile Include="SfM\RotationTransformationSolver.cpp" />
+    <ClCompile Include="SfM\SimilarityTransformationSolver.cpp" />
+    <ClCompile Include="SfM\TranslationSolver.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TrackMatching\MatchingMatrix.cpp" />
+    <ClCompile Include="TrackMatching\TrackMatcher.cpp" />
+    <ClCompile Include="TrackMatching\TrackMatcherClustering.cpp" />
+    <ClCompile Include="TrackMatching\TrackMatcherEnft.cpp" />
+    <ClCompile Include="TrackMatching\TrackMatcherIO.cpp" />
+    <ClCompile Include="TrackMatching\TrackMatchingFeatureMatching.cpp" />
+    <ClCompile Include="Utility\Polynomial.cpp" />
+    <ClCompile Include="Viewing\ViewerSequence.cpp" />
+    <ClCompile Include="Viewing\ViewerSequenceDepth.cpp" />
+    <ClCompile Include="Viewing\ViewerSequenceSet.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\config\config_gangwan.txt" />
+    <Text Include="..\config\config_KITTI.txt" />
+    <Text Include="..\config\config_plant.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

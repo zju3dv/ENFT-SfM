@@ -1,0 +1,113 @@
+stop = 0
+view = 1
+
+kf_min_common_tracks_number_two_key_frames = 300
+kf_min_common_tracks_number_three_key_frames = 300
+kf_min_tracks_number_per_key_frame = 100
+kf_min_track_length_key_frame = 2
+kf_bins_number_x = 10
+kf_bins_number_y = 10
+kf_min_features_number_per_bin = 2
+
+//---SfM config---//
+sfm_initial_score_filter_sigma = 0
+sfm_initial_homography_ratio = 0.5
+//sfm_initial_homography_ratio = 0.9
+
+//sfm_two_view_min_inliers_number = 80
+sfm_two_view_min_inliers_number = 10
+sfm_two_view_min_inliers_ratio = 0.3
+//sfm_two_view_min_inliers_ratio = 0.5
+sfm_two_view_homography_ratio_threshold = 0.8
+sfm_two_view_motion_initialization = 0
+//sfm_two_view_motion_initialization = 1
+sfm_two_view_scale = 0.01
+//sfm_two_view_ray_angle_threshold = 0.03
+sfm_two_view_ray_angle_threshold = 0.3
+//sfm_two_view_ray_angle_threshold = 3
+//sfm_multi_view_ray_angle_threshold = 0
+//sfm_multi_view_ray_angle_threshold = 0.1
+//sfm_multi_view_ray_angle_threshold = 0.3
+//sfm_multi_view_ray_angle_threshold = 0.5
+sfm_multi_view_ray_angle_threshold = 1
+//sfm_multi_view_ray_angle_threshold = 5
+//sfm_focal_prior_weight = 0.0
+sfm_focal_prior_weight = 1.0
+//sfm_focal_prior_weight = 10.0
+
+sfm_min_incremental_frame_tracks_number = 10
+//sfm_min_incremental_frame_tracks_number_initial_ratio = 0.1
+//sfm_min_incremental_frame_tracks_number_initial_ratio = 0.3
+//sfm_min_incremental_frame_tracks_number_initial_ratio = 0.5
+sfm_min_incremental_frame_tracks_number_initial_ratio = 0.8
+//sfm_min_incremental_frame_tracks_number_initial_ratio = 1.0
+//sfm_min_incremental_frame_tracks_number_to_max_ratio = 1.0
+sfm_min_incremental_frame_tracks_number_to_max_ratio = 0.8
+//sfm_min_incremental_frame_tracks_number_to_max_ratio = 0.5
+sfm_min_camera_inliers_number = 10
+//sfm_min_camera_inliers_number = 20
+sfm_min_camera_inlier_ratio_start = 0.9
+sfm_min_camera_inlier_ratio_step = -0.1
+sfm_min_camera_inlier_ratio_end = 0.3
+//sfm_min_camera_inlier_ratio_end = 0.5
+//sfm_min_camera_inlier_ratio_end = 0.8
+sfm_min_point_inliers_number = 2
+//sfm_min_point_inliers_ratio = 0.0
+//sfm_min_point_inliers_ratio = 0.5
+sfm_min_point_inliers_ratio = 0.8
+//sfm_min_point_inliers_ratio = 1.0
+
+//sfm_dense_points = 0
+sfm_dense_points = 1
+
+//sfm_focal_range_factor = 1.1
+//sfm_focal_range_factor = 1.8
+sfm_focal_range_factor = 2.0
+
+
+//---RANSAC config---//
+error_threshold_epipolar = 2.0
+error_threshold_reprojection_start = 2.0
+error_threshold_reprojection_step = 1.0
+error_threshold_reprojection_end = 10.0
+
+arsac_bin_size_x = 10
+arsac_bin_size_y = 10
+ransac_min_iterations_number_epipolar = 100
+//ransac_min_iterations_number_camera = 300
+//ransac_min_iterations_number_camera = 200
+ransac_min_iterations_number_camera = 150
+ransac_max_iterations_number_camera = 500
+//ransac_max_iterations_number_camera = 5000
+ransac_min_iterations_number_projective = 150
+ransac_max_iterations_number_projective = 5000
+ransac_min_iterations_number_point = 1
+ransac_max_iterations_number_point = 20
+
+baael_max_iterations_number_local = 3
+//baael_max_iterations_number_global = 4
+baael_max_iterations_number_global = 2
+
+ba_threads_number = 1
+ba_local_max_additional_adjusted_frames_number = 20
+//ba_local_min_tracks_number_per_frame = 300
+ba_local_min_tracks_number_per_frame = 800
+ba_local_max_iterations_number = 20
+ba_local_stop_mse = 0.2
+ba_local_stop_relative_reduction = 0.001
+//ba_global_min_tracks_number_per_frame = 300
+ba_global_min_tracks_number_per_frame = 800
+//ba_global_max_iterations_number = 20
+ba_global_max_iterations_number = 50
+ba_global_stop_mse = 0.1
+ba_global_stop_relative_reduction = 0.001
+
+//---RGBD tracking---//
+error_threshold_2d = 8.0
+//error_threshold_2d = 20.0
+//error_threshold_3d = 0.05
+//error_threshold_3d = 0.1
+error_threshold_3d = 0.5
+sigma_reprojection = 2.0f
+sigma_depth = 0.05
+weight_depth = 1.0

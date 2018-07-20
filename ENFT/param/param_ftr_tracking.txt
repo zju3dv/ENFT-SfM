@@ -1,0 +1,80 @@
+stop = 0
+view = 1
+remove_single_track = 1
+brute_force_matching = 0
+min_matches_number_key_to_last_frame = 300
+
+//---SIFT extraction---//
+feature_texture_width = 64
+feature_min_distance = 10
+feature_buffer_size = 50
+surf_hessian_threshold = 800
+sift_use_gpu = 1
+sift_max_features_number = 2048
+sift_octaves_number = 3
+sift_dog_levels_number = 3
+sift_dog_threshold = 0.02
+sift_edge_threshold = 10.0
+sift_upsample_image = 0
+
+//---SIFT matching---//
+//sift_matching_search_range_key_to_current_frame = 500
+//sift_matching_search_range_last_to_current_frame = 100
+//sift_matching_search_range_key_to_current_frame = 1000
+//sift_matching_search_range_last_to_current_frame = 500
+sift_matching_search_range_key_to_current_frame = 2000
+sift_matching_search_range_last_to_current_frame = 1000
+//sift_matching_search_range_key_to_current_frame = 5000
+//sift_matching_search_range_last_to_current_frame = 5000
+sift_matching_descriptor_dot_product_threshold = 0.95
+sift_matching_descriptor_nearest_first_to_second_ratio_threshold = 0.7
+
+
+//---ENFT matching---//
+enft_patch_window_size = 9
+enft_max_iterations_number = 20
+//enft_max_iterations_number = 10
+enft_weight_epipolar = 50.0
+enft_weight_homography = 50.0
+enft_offset_threshold = 0.005
+//enft_offset_threshold = 0.01
+//enft_intensity_error_threshold = 0.05
+//enft_intensity_error_threshold = 0.03
+enft_intensity_error_threshold = 0.01
+//enft_smooth_level = 1
+//enft_max_planes_number = 0
+//enft_max_planes_number = 1
+enft_max_planes_number = 3
+enft_min_points_number_per_plane = 20
+
+
+//---RANSAC config---//
+arsac_bin_size_x = 10
+arsac_bin_size_y = 10
+ransac_min_iterations_number_epipolar = 100
+ransac_max_iterations_number_epipolar = 300
+ransac_min_iterations_number_homography = 100
+ransac_max_iterations_number_homography = 300
+epipolar_min_inliers_number = 8
+//epipolar_min_inliers_number = 30
+epipolar_min_inliers_ratio = 0.3
+
+//flow_difference_threshold = 0.0
+flow_difference_threshold = 20.0
+//flow_difference_threshold = 100.0
+flow_positive_voting_threshold = 10
+flow_positive_voting_ratio_threshold = 0.5
+flow_voting_bin_size_x = 30
+flow_voting_bin_size_y = 30
+
+error_threshold_epipolar = 2.0
+//error_threshold_epipolar = 4.0
+//error_threshold_epipolar = 8.0
+//error_threshold_epipolar = 16.0
+error_threshold_homography = 2.0
+//error_threshold_homography = 4.0
+//error_threshold_homography = 8.0
+//error_threshold_homography = 16.0
+
+bf_positive_voting_threshold = 5
+bf_positive_voting_ratio_threshold = 0.8

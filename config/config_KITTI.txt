@@ -1,0 +1,30 @@
+videos_number = 1
+
+# window size
+window_width = 1241
+window_height = 376
+
+# input sequence, image filename format: %d.png
+video_0_image = E:/Data/image_0/000000.png
+# the start/step/end frame index 
+video_0_start = 0
+video_0_step = 1
+video_0_end = 4540
+
+# intrinsic params, format: fx fy cx cy
+calib_file_name = E:/Data/image_0/calib.txt
+const_focal = 1
+radio_distortion = 0
+
+param_directory = ../ENFT/param/
+output_directory = ../output/
+
+# params for segmentimg image sequence  
+min_frame_number = 100
+max_frame_number = 300
+
+# if save temporary file, when file exist£¬load them and skip corresponding steps(yes - 1, no - 0)
+use_temporary_file = 0
+
+# if visual results(yes - 1, no - 0)
+view = 1

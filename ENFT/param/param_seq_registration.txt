@@ -1,0 +1,72 @@
+stop = 0
+view = 1
+
+//kf_min_common_tracks_number_two_sequences = 5000
+kf_min_common_tracks_number_two_sequences = 1000
+//kf_min_common_tracks_number_two_sequences = 500
+//kf_min_tracks_number_per_key_frame = 500
+//kf_min_common_tracks_number_two_key_frames = 300
+//kf_min_common_tracks_number_three_key_frames = 200
+kf_min_tracks_number_per_key_frame = 100
+kf_min_common_tracks_number_two_key_frames = 200
+kf_min_common_tracks_number_three_key_frames = 200
+//kf_min_tracks_number_per_key_frame = 100
+//kf_min_common_tracks_number_two_key_frames = 80
+//kf_min_common_tracks_number_three_key_frames = 50
+kf_min_track_length_key_frame = 10
+kf_bins_number_x = 10
+kf_bins_number_y = 10
+kf_min_features_number_per_bin = 2
+
+//---SfM config---//
+sfm_min_incremental_sequence_common_tracks_number = 20
+sfm_min_incremental_sequence_common_tracks_number_to_max_ratio = 0.0
+//sfm_min_incremental_sequence_common_tracks_number_to_max_ratio = 1.0
+//sfm_max_sequence_transformations_number = 0
+sfm_max_sequence_transformations_number = 2
+sfm_min_sequence_inliers_number = 20
+//sfm_min_sequence_inliers_number = 100
+sfm_min_sequence_inliers_ratio_start = 0.95
+sfm_min_sequence_inliers_ratio_step = -0.1
+sfm_min_sequence_inliers_ratio_end = 0.7
+
+sfm_3d_error_threshold_ratio = 0.9
+//sfm_3d_error_threshold_ratio = 0.95
+//sfm_3d_error_threshold_ratio = 0.99
+//sfm_3d_error_threshold_ratio = 1.0
+
+//sfm_dense_points = 1
+sfm_dense_points = 0
+
+error_threshold_reprojection_start = 4.0
+error_threshold_reprojection_step = 2.0
+error_threshold_reprojection_end = 10.0
+
+//---RANSAC config---//
+ransac_min_iterations_number_similarity = 500
+ransac_max_iterations_number_similarity = 1000
+ransac_min_iterations_number_camera = 100
+ransac_max_iterations_number_camera = 300
+
+baael_max_iterations_number_local = 5
+//baael_max_iterations_number_global = 4
+baael_max_iterations_number_global = 3
+
+ba_threads_number = 1
+ba_individual_min_tracks_number_per_frame = 800
+//ba_individual_min_tracks_number_per_frame = 300
+ba_3d_max_iterations_number = 1000
+ba_local_max_additional_adjusted_sequences_number = 100
+ba_local_max_iterations_number = 20
+ba_local_stop_mse = 0.6
+ba_local_stop_relative_reduction = 0.01
+ba_global_max_iterations_number = 20
+ba_global_stop_mse = 0.1
+ba_global_stop_relative_reduction = 0.001
+
+spsfm_max_iterations_number = 100
+spsfm_segments_number_per_sequence_initial = 1
+spsfm_segments_number_per_sequence_factor = 2
+spsfm_segments_number_per_sequence_increment = 1
+spsfm_inconsistency_weight_gradient = 1.0
+error_threshold_reprojection_internal = 500.0

@@ -1,0 +1,1006 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Estimation">
+      <UniqueIdentifier>{34f8f96b-f1e3-4b52-b1aa-264635db8092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FeatureTracking">
+      <UniqueIdentifier>{5c30f161-7945-4e6f-abae-9aae413be031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LinearAlgebra">
+      <UniqueIdentifier>{b4548d1d-27ab-455c-938b-552a618d89ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Optimization">
+      <UniqueIdentifier>{28c7317f-68ba-4599-acef-4af2afff1a24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sequence">
+      <UniqueIdentifier>{4f29860b-f603-4f35-b621-dac06deb51de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SequenceSet">
+      <UniqueIdentifier>{d0a29ad9-2e55-4a3b-ad9d-97b31fc07b24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SfM">
+      <UniqueIdentifier>{1a8d9de2-c8b4-4939-bb09-11ee7f6bb1bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TrackMatching">
+      <UniqueIdentifier>{b9aa9314-e43d-47f7-808e-caa3eb8f544e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{7ace6ee7-9ccf-4714-ab01-ab661975e894}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewing">
+      <UniqueIdentifier>{c89f94b1-08cd-4a65-946b-63b9bd02e41f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="param">
+      <UniqueIdentifier>{ccc18aa3-9a93-4215-a3f1-23e9c3270a13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Optimization\ProgramGL">
+      <UniqueIdentifier>{56baeff7-6a20-4fd5-aed5-8086506f739c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CameraTracking">
+      <UniqueIdentifier>{d779c8b8-322f-42cc-bacd-7009efc7c873}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SequenceRegistration">
+      <UniqueIdentifier>{073bdfe0-d016-42a7-bd6b-71983034c1d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\linux">
+      <UniqueIdentifier>{30048a84-06d0-409f-8c25-611aab0a6f72}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="param\param_ftr_tracking.txt">
+      <Filter>param</Filter>
+    </None>
+    <None Include="param\param_trk_matching.txt">
+      <Filter>param</Filter>
+    </None>
+    <None Include="param\param_cam_tracking.txt">
+      <Filter>param</Filter>
+    </None>
+    <None Include="param\param_seq_registration.txt">
+      <Filter>param</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Estimation\Estimator.h">
+      <Filter>Estimation</Filter>
+    </ClInclude>
+    <ClInclude Include="Estimation\EstimatorArsac.h">
+      <Filter>Estimation</Filter>
+    </ClInclude>
+    <ClInclude Include="Estimation\EstimatorArsac.hpp">
+      <Filter>Estimation</Filter>
+    </ClInclude>
+    <ClInclude Include="Estimation\EstimatorArsacData.h">
+      <Filter>Estimation</Filter>
+    </ClInclude>
+    <ClInclude Include="Estimation\EstimatorLoProsac.hpp">
+      <Filter>Estimation</Filter>
+    </ClInclude>
+    <ClInclude Include="Estimation\EstimatorLosac.hpp">
+      <Filter>Estimation</Filter>
+    </ClInclude>
+    <ClInclude Include="Estimation\EstimatorParsac.h">
+      <Filter>Estimation</Filter>
+    </ClInclude>
+    <ClInclude Include="Estimation\EstimatorParsac.hpp">
+      <Filter>Estimation</Filter>
+    </ClInclude>
+    <ClInclude Include="Estimation\EstimatorProsac.hpp">
+      <Filter>Estimation</Filter>
+    </ClInclude>
+    <ClInclude Include="Estimation\EstimatorRansac.hpp">
+      <Filter>Estimation</Filter>
+    </ClInclude>
+    <ClInclude Include="FeatureTracking\FeatureExtractorSift.h">
+      <Filter>FeatureTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="FeatureTracking\FeatureTracker.h">
+      <Filter>FeatureTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="FeatureTracking\FeatureTrackerEnft.h">
+      <Filter>FeatureTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\LinearSystem.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix1.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix2.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix2x3.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix2x4.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix2x5.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix2x6.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix2x7.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix2x8.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix2x11.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix3.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix3x4.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix3x6.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix3x7.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix3x8.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix3x11.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix4.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix4x6.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix4x7.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix5.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix5x4.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix5x6.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix5x7.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix5x9.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix6.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix6x3.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix6x4.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix6x5.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix6x7.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix6x8.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix7.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix7x3.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix8.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix9x5.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Matrix11.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\MatrixMxN.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Vector2.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Vector3.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Vector4.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Vector5.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Vector6.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Vector7.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Vector8.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Vector9.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Vector11.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\Vector12.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAlgebra\VectorN.h">
+      <Filter>LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimization\Optimizer.h">
+      <Filter>Optimization</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimization\Optimizer.hpp">
+      <Filter>Optimization</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimization\OptimizerData.h">
+      <Filter>Optimization</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGL.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGL.hpp">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLAssignOrientation.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLBlend.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLComputeGainRatio.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLDepth.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLDescriptorCopy.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLDescriptorGenerate.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLDescriptorNormalize.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLDescriptorRearrange.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLDescriptorSelect.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLDoG.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLDoGExtremum.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLFeatureCopy.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLFeatureHistogram.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLFeatureLevelize.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLFeatureLocalize.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLFeatureRearrange.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLFeatureRectify.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLFeatureSelect.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLFilterPacked.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLGradient.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLMatchFeature.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLSample.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLTest.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLTrackFeatureEnft.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLUnpack.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\ProgramGLUtility.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\TextureGL.h">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramGL\TextureGL.hpp">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\Descriptor.h">
+      <Filter>Sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\Feature.h">
+      <Filter>Sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\Sequence.h">
+      <Filter>Sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\SequenceTag.h">
+      <Filter>Sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="SequenceSet\SequenceSet.h">
+      <Filter>SequenceSet</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\AffineTransformation.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\BoundingBox.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\Camera.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\CameraArray.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\CameraArrayCalibrationParameter.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\CameraArrayEPnP.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\CameraArrayEstimatorData.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\CameraArrayEstimatorMinimalSample.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\CameraEPnP.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\CameraEstimator.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\CameraEstimatorData.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\CameraEstimatorDataDepth.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\CameraEstimatorDepth.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\CameraPair.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\CameraPairEstimator.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\CameraPairEstimatorData.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\CameraPairEstimatorMinimalSample.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\EssentialMatrix.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\EssentialMatrixEstimator.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\EssentialMatrixEstimatorData.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\EssentialMatrixFivePointAlgorithm.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\FundamentalMatrix.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\FundamentalMatrixEightPointAlgorithm.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\FundamentalMatrixEstimator.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\FundamentalMatrixEstimatorData.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\Homography.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\HomographyEstimator.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\HomographyEstimatorData.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\HomographySolver.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\IntrinsicMatrix.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\Match.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\OmegaMatrix.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\Plane.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\PlaneEstimator.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\PlaneEstimatorData.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\PlaneEstimatorMinimalSample.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\PlaneSolver.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\Point.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\Point2DDistortionData.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\Point3DEstimator.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\Point3DEstimatorData.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\Point3DEstimatorDataDepth.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\Point3DEstimatorDepth.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\Point3DEstimatorMinimalSample.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\Point3DSolver.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\ProjectiveMatrix.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\ProjectiveMatrixDecomposer.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\ProjectiveMatrixEstimator.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\ProjectiveMatrixEstimatorData.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\ProjectiveMatrixSolver.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\Quaternion.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\RelativePoseEstimatorDataDepth.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\RelativePoseEstimatorDepth.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\RelativeTranslation.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\RelativeTranslationEstimator.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\RelativeTranslationEstimatorData.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\RelativeTranslationEstimatorMinimalSample.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\RelativeTranslationSolver.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\RigidTransformation.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\RigidTransformationSolver.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\RotationTransformation.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\RotationTransformationSolver.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\ScaleEstimator.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\ScaleEstimatorData.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\SimilarityTransformation.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\SimilarityTransformationEstimator.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\SimilarityTransformationEstimatorData.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\SimilarityTransformationSolver.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\Translation.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\TranslationEstimator.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\TranslationEstimatorData.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\TranslationScaleEstimator.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\TranslationScaleEstimatorData.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\TranslationScaleOptimizer.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\TranslationScaleSolver.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\TranslationSolver.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMatching\MatchingMatrix.h">
+      <Filter>TrackMatching</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMatching\TrackMatcher.h">
+      <Filter>TrackMatching</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\AlignedVector.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Bucket.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\BufferManager.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Configurator.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\FillMap.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Mutex.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Polynomial.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Pool.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Random.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\SegmentTree.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\SparseMatrix.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\SparseVector.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\SSE.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Table.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Timer.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Utility.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewing\Arcball.h">
+      <Filter>Viewing</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewing\CameraVolume.h">
+      <Filter>Viewing</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewing\EventHandler.h">
+      <Filter>Viewing</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewing\Viewer.h">
+      <Filter>Viewing</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewing\ViewerImage.h">
+      <Filter>Viewing</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewing\ViewerSequence.h">
+      <Filter>Viewing</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewing\ViewerSequenceSet.h">
+      <Filter>Viewing</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\AbsoluteQuadric.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\AbsoluteQuadricEstimator.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\AbsoluteQuadricOptimizerData.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraTracking\CameraTracker.h">
+      <Filter>CameraTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraTracking\CameraTrackerDepth.h">
+      <Filter>CameraTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="SequenceRegistration\SequenceRegisteror.h">
+      <Filter>SequenceRegistration</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimization\BundleAdjustor.h">
+      <Filter>Optimization</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimization\BundleAdjustor.hpp">
+      <Filter>Optimization</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimization\BundleAdjustorData.h">
+      <Filter>Optimization</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimization\BundleAdjustorData.hpp">
+      <Filter>Optimization</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimization\BundleAdjustorLM.hpp">
+      <Filter>Optimization</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimization\BundleAdjustorPCG.hpp">
+      <Filter>Optimization</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimization\GlobalTransformationOptimizer.h">
+      <Filter>Optimization</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimization\GlobalTransformationOptimizer.hpp">
+      <Filter>Optimization</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimization\GlobalTransformationOptimizerData.h">
+      <Filter>Optimization</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimization\GlobalTransformationOptimizerLM.hpp">
+      <Filter>Optimization</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimization\GlobalTransformationOptimizerPCG.hpp">
+      <Filter>Optimization</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\SequenceBundleAdjustorData.h">
+      <Filter>Sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\SequenceBundleAdjustorDataDepth.h">
+      <Filter>Sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\SequenceBundleAdjustorDataIntrinsicVariable.h">
+      <Filter>Sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\SequenceBundleAdjustorDataProjective.h">
+      <Filter>Sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\SequenceDepth.h">
+      <Filter>Sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewing\ViewerSequenceDepth.h">
+      <Filter>Viewing</Filter>
+    </ClInclude>
+    <ClInclude Include="SequenceSet\SegmentSetBundleAdjustorData2DSimilarity.h">
+      <Filter>SequenceSet</Filter>
+    </ClInclude>
+    <ClInclude Include="SequenceSet\SequenceSetBundleAdjustorData3DSimilarity.h">
+      <Filter>SequenceSet</Filter>
+    </ClInclude>
+    <ClInclude Include="SequenceSet\SequenceTransformationOptimizerDataSimilarity.h">
+      <Filter>SequenceSet</Filter>
+    </ClInclude>
+    <ClInclude Include="SfM\KeyFrameExtractor.h">
+      <Filter>SfM</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMatching\KCTree.h">
+      <Filter>TrackMatching</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMatching\HierarchicalKMeans.h">
+      <Filter>TrackMatching</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMatching\KMeans.h">
+      <Filter>TrackMatching</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Utility\linux_sse\xmmintrin.h">
+      <Filter>Utility\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\linux_sse\emmintrin.h">
+      <Filter>Utility\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="FeatureTracking\FeatureMatcherSift.h">
+      <Filter>FeatureTracking</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FeatureTracking\FeatureExtractorSift.cpp">
+      <Filter>FeatureTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="FeatureTracking\FeatureTracker.cpp">
+      <Filter>FeatureTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="FeatureTracking\FeatureTrackerEnft.cpp">
+      <Filter>FeatureTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="FeatureTracking\FeatureTrackerFlowVoting.cpp">
+      <Filter>FeatureTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="FeatureTracking\FeatureTrackerIO.cpp">
+      <Filter>FeatureTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="FeatureTracking\FeatureTrackerSift.cpp">
+      <Filter>FeatureTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearAlgebra\Matrix3.cpp">
+      <Filter>LinearAlgebra</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearAlgebra\Matrix4.cpp">
+      <Filter>LinearAlgebra</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearAlgebra\Matrix5.cpp">
+      <Filter>LinearAlgebra</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearAlgebra\Matrix6.cpp">
+      <Filter>LinearAlgebra</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearAlgebra\Matrix7.cpp">
+      <Filter>LinearAlgebra</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearAlgebra\Matrix8.cpp">
+      <Filter>LinearAlgebra</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearAlgebra\Matrix11.cpp">
+      <Filter>LinearAlgebra</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearAlgebra\MatrixMxN.cpp">
+      <Filter>LinearAlgebra</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgramGL\ProgramGL.cpp">
+      <Filter>Optimization\ProgramGL</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\Sequence.cpp">
+      <Filter>Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceDataAssociation.cpp">
+      <Filter>Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceFrame.cpp">
+      <Filter>Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceIO.cpp">
+      <Filter>Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceMeasurement.cpp">
+      <Filter>Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceSynthesis.cpp">
+      <Filter>Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceTag.cpp">
+      <Filter>Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceTrack.cpp">
+      <Filter>Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceTransformation.cpp">
+      <Filter>Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceSet\SequenceSet.cpp">
+      <Filter>SequenceSet</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceSet\SequenceSetDataAssociation.cpp">
+      <Filter>SequenceSet</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceSet\SequenceSetFrame.cpp">
+      <Filter>SequenceSet</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceSet\SequenceSetIO.cpp">
+      <Filter>SequenceSet</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceSet\SequenceSetMeasurement.cpp">
+      <Filter>SequenceSet</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceSet\SequenceSetTrack.cpp">
+      <Filter>SequenceSet</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\CameraArrayEPnP.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\CameraEPnP.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\EssentialMatrix.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\EssentialMatrixFivePointAlgorithm.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\FundamentalMatrix.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\FundamentalMatrixEightPointAlgorithm.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\Homography.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\HomographySolver.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\PlaneSolver.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\Point3DSolver.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\ProjectiveMatrix.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\ProjectiveMatrixSolver.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\RelativeTranslationSolver.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\RigidTransformationSolver.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\RotationTransformationSolver.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\SimilarityTransformationSolver.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\TranslationSolver.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackMatching\MatchingMatrix.cpp">
+      <Filter>TrackMatching</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackMatching\TrackMatcher.cpp">
+      <Filter>TrackMatching</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackMatching\TrackMatcherClustering.cpp">
+      <Filter>TrackMatching</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackMatching\TrackMatcherEnft.cpp">
+      <Filter>TrackMatching</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackMatching\TrackMatcherIO.cpp">
+      <Filter>TrackMatching</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackMatching\TrackMatchingFeatureMatching.cpp">
+      <Filter>TrackMatching</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Polynomial.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewing\ViewerSequence.cpp">
+      <Filter>Viewing</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewing\ViewerSequenceSet.cpp">
+      <Filter>Viewing</Filter>
+    </ClCompile>
+    <ClCompile Include="SfM\AbsoluteQuadricEstimator.cpp">
+      <Filter>SfM</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraTracking\CameraTracker.cpp">
+      <Filter>CameraTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraTracking\CameraTrackerDepth.cpp">
+      <Filter>CameraTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraTracking\CameraTrackerDepthIO.cpp">
+      <Filter>CameraTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraTracking\CameraTrackerDepthSfM.cpp">
+      <Filter>CameraTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraTracking\CameraTrackerIO.cpp">
+      <Filter>CameraTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraTracking\CameraTrackerSfM.cpp">
+      <Filter>CameraTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceRegistration\SequenceRegisteror.cpp">
+      <Filter>SequenceRegistration</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceRegistration\SequenceRegisterorIO.cpp">
+      <Filter>SequenceRegistration</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceRegistration\SequenceRegisterorSegmentation.cpp">
+      <Filter>SequenceRegistration</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceRegistration\SequenceRegisterorSfM.cpp">
+      <Filter>SequenceRegistration</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceBundleAdjustment.cpp">
+      <Filter>Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceBundleAdjustorData.cpp">
+      <Filter>Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceBundleAdjustorDataDepth.cpp">
+      <Filter>Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceBundleAdjustorDataIntrinsicVariable.cpp">
+      <Filter>Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceBundleAdjustorDataProjective.cpp">
+      <Filter>Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceDepth.cpp">
+      <Filter>Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewing\ViewerSequenceDepth.cpp">
+      <Filter>Viewing</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceSet\SegmentSetBundleAdjustorData2DSimilarity.cpp">
+      <Filter>SequenceSet</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceSet\SequenceSetBundleAdjustorData3DSimilarity.cpp">
+      <Filter>SequenceSet</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceSet\SequenceTransformationOptimizerDataSimilarity.cpp">
+      <Filter>SequenceSet</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceSet\SequenceSetBundleAdjustment.cpp">
+      <Filter>SequenceSet</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="ENFT.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\config\config_gangwan.txt" />
+    <Text Include="..\config\config_KITTI.txt" />
+    <Text Include="..\config\config_plant.txt" />
+  </ItemGroup>
+</Project>
