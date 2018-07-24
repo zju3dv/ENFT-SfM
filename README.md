@@ -10,7 +10,7 @@ For Segment-Based Bundle Adjustment implementation, please go to [SegmentBA](htt
 
 ## 1. Introduction
 
-ENFT (**E**fficient **N**on-consecutive **F**eature **T**racking) is a feature tracking method which can efficiently match feature point correspondences among one or multiple video sequences. ENFT-SfM is a complete structure-from-motion system which uses ENFT method for feature tracking and SegmentBA fo bundle adjustment optimization.
+ENFT (**E**fficient **N**on-consecutive **F**eature **T**racking) is a feature tracking method which can efficiently match feature point correspondences among one or multiple video sequences. ENFT-SfM is a complete structure-from-motion system which uses ENFT method for feature tracking and SegmentBA for bundle adjustment optimization.
 
 ## 2. Related Publications
 
@@ -60,7 +60,7 @@ For Windows:
 For Ubuntu 16.04:
 
 ```bash
-sudo apt-get install libjpeg-dev libtiff-dev libpng-dev
+sudo apt-get install libx11-dev libglew-dev freeglut3-dev libjpeg-dev libtiff-dev libpng-dev
 cd /path/to/the/project
 mkdir -p build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..

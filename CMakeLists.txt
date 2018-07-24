@@ -11,15 +11,10 @@ if(CMAKE_BUILD_TYPE MATCHES Debug)
 	add_definitions(-D_DEBUG)
 endif()
 
-#require opencv 2.4.x.
-FIND_PACKAGE(OpenCV 2.4 REQUIRED )
-message(STATUS "OpenCV version:" ${OpenCV_VERSION})
-
 include_directories(		
-		${OpenCV_INCLUDE_DIR}
+		${PROJECT_SOURCE_DIR}
 		${PROJECT_SOURCE_DIR}/3rdparty/levmar
 		${PROJECT_SOURCE_DIR}/3rdparty
-		${PROJECT_SOURCE_DIR}
 		${PROJECT_SOURCE_DIR}/ENFT
 		${PROJECT_SOURCE_DIR}/Localizer
 		${PROJECT_SOURCE_DIR}/RegisterGPS
@@ -125,17 +120,7 @@ set(
 
 ### ENFT.lib
 add_library(${PROJECT_NAME} STATIC ${ENFT_SOURCE_FILES})
-target_link_libraries(
-		${PROJECT_NAME}
-		-lX11
-		-lGL
-		-lGLU
-		-lGLEW
-		-lglut
-		${OpenCV_LIBS}
-)
 
-# tmp modify for glsl debug
 target_link_libraries(
 		${PROJECT_NAME}
 		${PROJECT_SOURCE_DIR}/3rdparty/levmar/linux_lib/liblevmar.a
@@ -143,11 +128,16 @@ target_link_libraries(
 		${PROJECT_SOURCE_DIR}/3rdparty/clapack/linux_lib/libblas.a
 		${PROJECT_SOURCE_DIR}/3rdparty/clapack/linux_lib/libf2c.a
 		${PROJECT_SOURCE_DIR}/3rdparty/CVD/linux_lib/libcvd.a
+		-lX11
+		-lGL
+		-lGLU
+		-lGLEW
+		-lglut
         -ljpeg
-        -lpng12
+        -lpng
         -ltiff
 )
 
-### ENFT exe
+### ENFT exec
 add_executable(runENFT ENFT/ENFT.cpp)
 target_link_libraries(runENFT ${PROJECT_NAME})
