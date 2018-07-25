@@ -97,7 +97,7 @@ We provide three configuration file example in `ENFT\config\`, which show how to
 #### Dataset
 
 - Single Sequence Datasets
-  - Varying Focal Length "Plant" ([Our Website]((http://www.cad.zju.edu.cn/home/gfzhang/projects/tracking/featuretracking/data/plant.rar))) , use `config_plant.txt` 
+  - Varying Focal Length "Plant" ([Our Website](http://www.cad.zju.edu.cn/home/gfzhang/projects/tracking/featuretracking/data/plant.rar)) , use `config_plant.txt` 
   - Constant Focal Length "KITTI Seq00" ( [Google Drive](https://drive.google.com/file/d/1hvpwvf6Y9tTcIniI4fgXg_I02nrrbDbD/view?usp=sharing) , [Baidu Net Disk](https://pan.baidu.com/s/1tv1mEV9yps-LV3VqxRbRHg)), use `config_KITTI.txt`
 - Multiple Sequences Dataset "Gangwan Street" ([Google Drive](https://drive.google.com/file/d/0B82Mv44r3F25ZGhtSWdNZ3FQNUE/view?usp=sharing), [Baidu Net Disk](http://pan.baidu.com/s/1kTzsTwV)), use `config_gangwan.txt`
 
