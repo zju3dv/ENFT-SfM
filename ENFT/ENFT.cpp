@@ -35,7 +35,7 @@ typedef struct Video {
     int start, step, end;
 } Video;
 
-void RunENFT(const std::vector<Video> &videos, const char *paramDir_s, const char *outputDir_s,
+void RunENFT(std::vector<Video> &videos, const char *paramDir_s, const char *outputDir_s,
              const char *calibFileName, bool const_focal = true, bool distortion = false,
              const int nFrmsMin = -1, const int nFrmsMax = -1,
              const bool useTmpFile = true, const bool view = true) {
@@ -56,7 +56,7 @@ void RunENFT(const std::vector<Video> &videos, const char *paramDir_s, const cha
     Vs.CreateSequences(SequenceIndex(video_num));
 
     for (int iVideo = 0; iVideo < video_num; ++iVideo) {
-        const Video &video = videos[iVideo];
+        Video &video = videos[iVideo];
         const std::string dir = IO::ExtractFileDirectory(video.imgFileName);
         const std::string imgFileName = IO::RemoveFileDirectory(video.imgFileName);
 
@@ -72,7 +72,8 @@ void RunENFT(const std::vector<Video> &videos, const char *paramDir_s, const cha
         seqRegister.Initialize(Vs, paramDir + "param_seq_registration.txt", !distortion);
 
         // If useTmpFile, try to load V.txt
-        const std::string outputDir = strcmp(outputDir_s, "") == 0 ? V.GetDirectory() : std::string(outputDir_s);
+        const std::string outputDir = strcmp(outputDir_s,
+                                             "") == 0 ? V.GetDirectory() : std::string(outputDir_s);
         char fileName[MAX_LINE_LENGTH];
         sprintf(fileName, "v%d.txt", iVideo);
         if (useTmpFile && V.LoadBwithDir((outputDir + fileName).c_str())) {
@@ -126,6 +127,8 @@ void RunENFT(const std::vector<Video> &videos, const char *paramDir_s, const cha
         if (useTmpFile) {
             sprintf(fileName, "v%d.txt", iVideo);
             V.SaveBwithDir((outputDir + fileName).c_str());
+            sprintf(fileName, "v%d.act", iVideo);
+            V.SaveAct((outputDir + fileName).c_str());
         }
     }
 
@@ -156,6 +159,7 @@ void RunENFT(const std::vector<Video> &videos, const char *paramDir_s, const cha
         V.ScaleScene(scale);
         const Video &video = videos[iVideo];
         if (video.actFileName) {
+            printf("%s\n", video.actFileName);
             V.SaveAct(video.actFileName);
         }
         if (video.keyFileName || video.keyImgFileName || video.keyActFileName) {

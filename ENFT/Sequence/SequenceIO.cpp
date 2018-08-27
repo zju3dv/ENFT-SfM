@@ -459,7 +459,8 @@ bool Sequence::LoadActb(const char *fileName, const bool normalizeMeas,
 
 bool Sequence::SaveAct(const char *fileName) const {
 
-    FILE *fp = fopen((GetDirectory() + fileName).c_str(), "w");
+    //FILE *fp = fopen((GetDirectory() + fileName).c_str(), "w");
+    FILE *fp = fopen(fileName, "w");
     if (fp == 0) {
         return false;
     }
@@ -574,7 +575,7 @@ bool Sequence::SaveAct(const char *fileName) const {
     fprintf(fp, "</Camera Track>\n");
     fclose(fp);
 
-    printf("Saved \'%s\'\n", (GetDirectory() + fileName).c_str());
+    printf("Saved \'%s\'\n",  fileName);
     return true;
 }
 
@@ -649,7 +650,8 @@ inline static bool GetLine(FILE *fp, const char *content, char *line) {
 bool Sequence::LoadAct(const char *fileName, const bool normalizeMeas,
                        const bool loadClr, const bool skipCam) {
 
-    FILE *fp = fopen((GetDirectory() + fileName).c_str(), "r");
+    //FILE *fp = fopen((GetDirectory() + fileName).c_str(), "r");
+    FILE *fp = fopen(fileName, "r");
     if (fp == nullptr) {
         return false;
     }

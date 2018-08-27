@@ -72,27 +72,29 @@ make -j4
 
 We provide three configuration file example in `ENFT\config\`, which show how to run ENFT-SfM in single sequence mode ( support varying focal length and constant focal length datasets) and multiple sequences mode (the camera intrinsic parameters should be known). Please refer to **Dataset** part to download these corresponding datasets.
 
-1.`videos_number` is the number of videos.
+1. `videos_number` is the number of videos.
 
-2.`window_width` and `window_height` indicate the size of window.
+2. `window_width` and `window_height` indicate the size of window.
 
-3.`video_i_*`give the information of the i'th video.
+3. `video_i_*`give the information of the i'th video.
 
-4.`calib_file_name` is the file name which provide the camera intrinsic parameters (fx,fy,cx,cy). If not provided, the system will assume the focal length is contant but unkown (if const_focal = 1) or varied (if const_focal = 0).
+4. `calib_file_name` is the file name which provide the camera intrinsic parameters (fx,fy,cx,cy). If not provided, the system will assume the focal length is contant but unkown (if const_focal = 1) or varied (if const_focal = 0).
 
-5.`const_focal` will be used when calib_file_name not given, set 1 if the focal length of the camera is constant.
+5. `const_focal` will be used when calib_file_name not given, set 1 if the focal length of the camera is constant.
 
-6.`radio_distortion` set 1 when camera distortion not rectified.
+6. `radio_distortion` set 1 when camera distortion not rectified.
 
-5.`param_directory` is the param file directory and it contains the detailed params of tracking and bundle adjustment.
+7. `param_directory` is the param file directory and it contains the detailed params of tracking and bundle adjustment.
 
-5.`output_directory` is the output file directory, it would be the video directory when not given or do not exist.
+8. `output_directory` is the output file directory, it would be the video directory when not given or do not exist.
 
-6.`min_frame_number` and `max_frame_number` is the param of segmentBA for spliting a video to several sequences.
+9. `min_frame_number` and `max_frame_number` is the param of segmentBA for spliting a video to several sequences.
 
-8.`use_temporary_file` set 1 to save and reuse (if exist) temporary files for some steps in SfM. 
+10. `use_temporary_file` set 1 to save ACT files and reuse (if exist) temporary binary files (e.g. v0.txt) for some steps in SfM.
 
-7.`view` set 1 to show the result.
+11. `view` set 1 to show the result.
+
+
 
 #### Dataset
 
