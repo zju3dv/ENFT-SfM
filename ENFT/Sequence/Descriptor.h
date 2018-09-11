@@ -316,61 +316,6 @@ class Descriptor64f {
     ENFT_SSE::__m128 m_sse0, m_sse1, m_sse2, m_sse3, m_sse4, m_sse5, m_sse6, m_sse7, m_sse8,
            m_sse9, m_sse10, m_sse11, m_sse12, m_sse13, m_sse14, m_sse15;
   public:
-    static inline void ORBTocount(const Descriptor64f &A, int *count) {
-        uint temf = 0;
-        for (int k = 0; k < 8; k++) {
-            temf = (A.intptr())[k];
-            for (int i = 0; i < 4 * 8; i++) {
-                if ((temf & 1) == 1)
-                    count[k * 4 * 8 +4*8-i-1]++;
-                temf = temf >> 1;
-            }
-        }
-    }
-    static inline void countToORB(const int num, const int *count,
-                                  Descriptor64f &A) {
-        uint temf = 0;
-        for (int k = 0; k < 8; k++) {
-            temf = 0;
-            if (count[k * 4 * 8 ]*2 >= num )
-                temf = temf | 1;
-            for (int i = 0; i < 4 * 8; i++) {
-                temf = temf << 1;
-                if (count[k * 4 * 8 + i]*2 >= num )
-                    temf = temf | 1;
-            }
-
-            (A.intptr())[k] = temf;
-            (A.intptr())[k + 8] = 0;
-        }
-    }
-
-	static inline float ORBDistance(const Descriptor64f &A, const Descriptor64f &B)
-	{
-#ifdef __LINUX__
-        int dist = 0;
-        const int *pa = A.intptr();
-		const int *pb = B.intptr();
-		for (int i = 0; i<8; i++, pa++, pb++)
-		{
-			unsigned  int v = *pa ^ *pb;
-			v = v - ((v >> 1) & 0x55555555);
-			v = (v & 0x33333333) + ((v >> 2) & 0x33333333);
-			int tdis = (((v + (v >> 4)) & 0xF0F0F0F) * 0x1010101) >> 24;
-            dist += tdis;
-		}
-		return dist / 256.0;
-#else
-		long long dist = 0;
-		ENFT_SSE::__m128 v = ENFT_SSE::_mm_xor_ps(A.m_sse0, B.m_sse0);
-		dist += ENFT_SSE::_mm_popcnt_u64(v.m128_u64[0]);
-		dist += ENFT_SSE::_mm_popcnt_u64(v.m128_u64[1]);
-		v = ENFT_SSE::_mm_xor_ps(A.m_sse1, B.m_sse1);
-		dist += ENFT_SSE::_mm_popcnt_u64(v.m128_u64[0]);
-		dist += ENFT_SSE::_mm_popcnt_u64(v.m128_u64[1]);
-		return dist / 256.0f;
-#endif //__LINUX__
-	}
 
     static inline void ApB(const Descriptor64f &A, const Descriptor64f &B,
                            Descriptor64f &ApB) {
